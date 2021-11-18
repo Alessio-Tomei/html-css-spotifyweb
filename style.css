@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Inizio footer */
+
+footer {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    padding: 10px;
+    background-color: #282828;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+footer .song-preview {
+    display: flex;
+    min-width: 150px;
+}
+
+footer .song-preview .regroup {
+    display: flex;
+    align-items: center;
+    margin-right: 14px;
+}
+
+footer .song-preview .regroup .song-img {
+    margin-right: 10px;
+}
+
+footer .song-preview .regroup .song-img img {
+    width: 30px;
+    display: block;
+}
+
+footer .song-preview .regroup .song-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 60px;
+    max-width: 80px;
+}
+
+footer .song-preview .regroup .song-info h3 {
+    font-size: 14px;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+footer .song-preview .regroup .song-info h4 {
+    font-size: 12px;
+    color: #878787;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+footer .song-preview .buttons-add-to {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 16px;
+    color: #878787;
+    
+}
+
+footer .player-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    width: calc(100% - 320px);
+    color: white;
+    margin: 0px 10px;
+}
+
+footer .player-controls .player-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer .player-controls .player-buttons i.fa-play-circle {
+    font-size: 35px;
+}
+
+footer .player-controls .time-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    font-size: 12px;
+}
+
+footer .player-controls .time-bar .track-bar,
+footer .output-controls .volume-bar .track-bar {
+    position: relative;
+    height: 4px;
+    width: 70%;
+    background-color: #5a5a5a;
+    border-radius: 4px;
+    margin: 0px 5%;
+}
+
+footer .player-controls .time-bar .current-bar,
+footer .output-controls .volume-bar .current-bar {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    border-radius: 4px;
+    background-color: #c1c1c1;
+}
+
+footer .player-controls .time-bar:hover .current-bar,
+footer .output-controls .volume-bar:hover .current-bar {
+    background-color: #17d437;
+}
+
+footer .player-controls .time-bar .handle,
+footer .output-controls .volume-bar .handle {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+footer .player-controls .time-bar:hover .handle,
+footer .output-controls .volume-bar:hover .handle {
+    display: block;
+}
+
+footer .output-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 150px;
+    font-size: 16px;
+    color: white;
+}
+
+footer .output-controls .volume-bar {
+    width: 50%;
+}
+
+footer .output-controls .volume-bar .track-bar {
+    width: 100%;
+    margin: 0px;
+}
+
+
+/* Fine footer */
