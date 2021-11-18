@@ -6,9 +6,73 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: #141922;
 }
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Inizio main */
+
+main {
+    height: calc(100vh - 100px);
+}
+
+main nav{
+    background-color: black;
+    width: 80px;
+    height: 100%;
+}
+
+main .content {
+    position: relative;
+    width: calc(100% - 80px);
+    height: 100%;
+}
+
+main nav,
+main .content {
+    float: left;
+}
+
+main .content .header {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 90px;
+    width: 100%;
+    padding: 10px;
+}
+
+main .content .header .button {
+    padding: 10px 30px;
+    border: 1px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+main .content .header .button:hover {
+    transform: scale(1.1);
+    /* padding: 12px 32px; */
+}
+
+main .content .header .button a{
+    font-size: 12px;
+    color: white;
+}
+
+/* Fine main */
 
 /* Inizio footer */
 
@@ -54,15 +118,23 @@ footer .song-preview .regroup .song-info {
     max-width: 80px;
 }
 
+footer .song-preview .regroup .song-info > * {
+    cursor: pointer;
+}
+
+footer .song-preview .regroup .song-info > *:hover {
+    text-decoration: underline;
+}
+
 footer .song-preview .regroup .song-info h3 {
-    font-size: 14px;
+    font-size: 12px;
     color: white;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 footer .song-preview .regroup .song-info h4 {
-    font-size: 12px;
+    font-size: 10px;
     color: #878787;
     white-space: nowrap;
     overflow: hidden;
@@ -74,8 +146,15 @@ footer .song-preview .buttons-add-to {
     flex-direction: column;
     justify-content: space-around;
     font-size: 16px;
-    color: #878787;
-    
+    color: #878787; 
+}
+
+footer .song-preview .buttons-add-to i {
+    cursor: pointer;
+}
+
+footer .song-preview .buttons-add-to i:hover {
+    color: white;
 }
 
 footer .player-controls {
@@ -98,8 +177,16 @@ footer .player-controls .player-buttons {
     margin-bottom: 10px;
 }
 
+footer .player-controls .player-buttons i {
+    cursor: pointer;
+}
+
 footer .player-controls .player-buttons i.fa-play-circle {
     font-size: 35px;
+}
+
+footer .player-controls .player-buttons i:hover {
+ transform: scale(1.2);
 }
 
 footer .player-controls .time-bar {
@@ -111,14 +198,19 @@ footer .player-controls .time-bar {
     font-size: 12px;
 }
 
-footer .player-controls .time-bar .track-bar,
-footer .output-controls .volume-bar .track-bar {
+footer .player-controls .time-bar .time-l,
+footer .player-controls .time-bar .time-r {
+    cursor: pointer;
+}
+
+footer .player-controls .time-bar .track-bar {
     position: relative;
     height: 4px;
     width: 70%;
     background-color: #5a5a5a;
     border-radius: 4px;
     margin: 0px 5%;
+    cursor: pointer;
 }
 
 footer .player-controls .time-bar .current-bar,
@@ -130,8 +222,10 @@ footer .output-controls .volume-bar .current-bar {
     background-color: #c1c1c1;
 }
 
-footer .player-controls .time-bar:hover .current-bar,
-footer .output-controls .volume-bar:hover .current-bar {
+footer .player-controls .time-bar .track-bar:hover
+ .current-bar,
+footer .output-controls .regroup:last-child:hover
+ .volume-bar .current-bar {
     background-color: #17d437;
 }
 
@@ -148,22 +242,54 @@ footer .output-controls .volume-bar .handle {
     background-color: white;
 }
 
-footer .player-controls .time-bar:hover .handle,
-footer .output-controls .volume-bar:hover .handle {
+footer .player-controls .time-bar .track-bar:hover
+ .handle,
+footer .output-controls .regroup:last-child:hover
+ .volume-bar .handle {
     display: block;
 }
 
 footer .output-controls {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     min-width: 150px;
     font-size: 16px;
     color: white;
 }
 
+footer .output-controls .regroup:first-child {
+    display: flex;
+    width: 54px;
+}
+
+footer .output-controls .regroup:first-child i {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+footer .output-controls .regroup:last-child {
+    display: flex;
+    width: calc(100% - 54px);
+    align-items: center;
+    cursor: pointer;
+}
+
+footer .output-controls .regroup:last-child i {
+    margin-right: 5px;
+}
+
 footer .output-controls .volume-bar {
-    width: 50%;
+    width: 100%;
+}
+
+footer .player-controls .time-bar .track-bar,
+footer .output-controls .volume-bar .track-bar {
+    position: relative;
+    height: 4px;
+    width: 70%;
+    background-color: #5a5a5a;
+    border-radius: 4px;
+    margin: 0px 5%;
 }
 
 footer .output-controls .volume-bar .track-bar {
