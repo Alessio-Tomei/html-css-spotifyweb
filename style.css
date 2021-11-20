@@ -29,7 +29,7 @@ div.line {
     display: none;
     width: 40%;
     margin: 0 auto;
-    border: 1px solid #17d437;
+    border-bottom: 2px solid #17d437;
     border-radius: 3px;
 }
 
@@ -55,6 +55,114 @@ main nav,
 main .content {
     float: left;
 }
+
+/* Inizio main nav */
+
+main nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+nav .regroup {
+    width: 100%;
+}
+
+nav .regroup:first-child {
+    min-height: 300px;
+}
+
+/*inizio not in mobile */
+
+main nav .regroup .logo a img.not-mobile{
+    display: none;
+}
+
+main nav .regroup ul li a h3 {
+    display: none;
+}
+
+main nav .regroup ul li .line {
+    display: none;
+}
+
+main nav .regroup .playlist {
+    display: none;
+}
+
+main nav .regroup .app-download a span {
+    display: none;
+}
+
+main nav .regroup .user a h3 {
+    display: none;
+}
+
+/* Fine not in mobile */
+
+main nav .regroup .logo {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+main nav .regroup .logo a img {
+    width: 30px;
+}
+
+main nav .regroup > ul li {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+main nav .regroup > ul li a{
+    opacity: 0.7;
+}
+
+main nav .regroup > ul li a:hover {
+    opacity: 1;
+}
+
+main nav .regroup > ul li a img {
+    width: 25px;
+}
+
+main nav .regroup .app-download {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+main nav .regroup .app-download a {
+    opacity: 0.7;
+}
+
+main nav .regroup .app-download a:hover {
+    opacity: 1;
+}
+
+
+main nav .regroup .app-download a img{
+    width: 20px;
+}
+
+main nav .regroup .user a .user-img-box {
+    width: 25px;
+    height: 25px;
+    margin: 0 auto;
+    background-color: #808080;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+main nav .regroup .user a .user-img-box  img{
+    width: 100%;
+}
+
+/* Fine main nav */
+
+/* Inizio content */
 
 main .content .header {
     position: absolute;
@@ -211,6 +319,8 @@ main .content #home .row .album-conteiner .album-box h3 a:hover,
 main .content #home .row .album-conteiner .album-box h4 a:hover {
     text-decoration: underline;
 }
+
+/* Fine Content */
 
 /* Fine main */
 
@@ -440,3 +550,8 @@ footer .output-controls .volume-bar .track-bar {
 
 
 /* Fine footer */
+
+
+/* main nav .regroup ul li.active {
+    border-left: 2px solid #17d437;
+} */
