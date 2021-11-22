@@ -71,7 +71,8 @@ nav .regroup {
 }
 
 nav .regroup:first-child {
-    min-height: 300px;
+    min-height: 305px;
+    overflow: hidden;
 }
 
 /*inizio not in mobile */
@@ -129,6 +130,12 @@ main nav .regroup > ul li a img {
     width: 25px;
 }
 
+main nav .regroup .playlist ul {
+    max-height: 200px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
 main nav .regroup .app-download {
     margin-bottom: 10px;
     text-align: center;
@@ -173,7 +180,7 @@ main .content .header {
     background-color: rgba(0, 0, 0, 0.5);
     height: 90px;
     width: 100%;
-    padding: 10px;
+    padding-right: 30px;
 }
 
 main .content .header .button {
@@ -552,6 +559,191 @@ footer .output-controls .volume-bar .track-bar {
 /* Fine footer */
 
 
-/* main nav .regroup ul li.active {
-    border-left: 2px solid #17d437;
-} */
+@media screen and (min-width: 576px) {
+    main nav{
+        width: 200px;
+    }
+
+    main .content {
+        width: calc(100% - 200px);
+    }
+
+    main nav .regroup .logo a img.not-mobile{
+        display: block;
+    }
+
+    main nav .regroup .logo a img.mobile{
+        display: none;
+    }
+
+    main nav .regroup ul li a h3 {
+        display: block;
+    }
+    
+    main nav .regroup ul li .line {
+        display: block;
+    }
+    
+    main nav .regroup .playlist {
+        display: block;
+    }
+    
+    main nav .regroup .app-download a span {
+        display: block;
+    }
+    
+    main nav .regroup .user a h3 {
+        display: block;
+    }
+
+    /* Inizio main nav */
+
+    main nav .regroup .logo a img {
+        width: 120px;
+        padding-left: 20px;
+    }
+
+    main nav .regroup ul li.active {
+        border-left: 2px solid #17d437;
+    }
+
+    main nav .regroup > ul li a{
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        color: white;
+    }
+
+    main nav .regroup > ul li a h3 {
+        font-size: 12px;
+        font-weight: 400;
+        padding-left: 5px;
+    }
+
+    main nav .regroup .playlist {
+        margin-top: 20px;
+        padding-left: 20px;
+    }
+
+    main nav .regroup .playlist h2 {
+        color: white;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    main nav .regroup .playlist .new-playlist {
+        width: max-content;
+        display: flex;
+        align-items: center;
+        opacity: 0.7;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+    main nav .regroup .playlist .new-playlist:hover {
+        opacity: 1;
+    }
+
+    main nav .regroup .playlist .new-playlist div {
+        background-color: white;
+        width: 30px;
+        height: 30px;
+        position: relative;
+    }
+
+    main nav .regroup .playlist .new-playlist div i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+    }
+
+    main nav .regroup .playlist .new-playlist span {
+        color: white;
+        padding-left: 10px;
+    }
+
+    main nav .regroup .playlist ul li {
+        margin-bottom: 20px;
+    }
+
+    main nav .regroup .playlist ul li a {
+        color: white;
+        font-size: 12px;
+        opacity: 0.7;
+    }
+    
+    main nav .regroup .playlist ul li a:hover {
+        opacity: 1;
+    }
+    
+    main nav .regroup:last-child {
+        padding: 0 20px;
+    }
+
+    main nav .regroup .app-download {
+        margin-bottom: 10px;
+        text-align: initial;
+        border-bottom: 1px solid #808080;
+        padding-bottom: 10px;
+    }
+
+    main nav .regroup .app-download a {
+        width: max-content;
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+
+    main nav .regroup .app-download a span{
+        font-size: 12px;
+        padding-left: 10px;
+    }
+
+    main nav .regroup .user a {
+        width: max-content;
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+    
+    main nav .regroup .user a .user-img-box {
+        margin: 0 0;
+    }
+
+    main nav .regroup .user a h3{
+        font-size: 14px;
+        padding-left: 10px;
+    }
+
+    /* Fine main nav */
+}
+
+@media screen and (min-width: 768px) {
+    main .content #home .row .album-conteiner .album-box {
+        width: 25%;
+    }
+    
+    footer .song-preview .buttons-add-to {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    footer .song-preview .buttons-add-to i:first-child {
+        margin-right: 5px;
+    }
+
+    footer .song-preview .regroup {
+        margin-right: 10px;
+    }
+
+    footer .song-preview .regroup .song-info {
+        width: 54px;
+    }
+}
+@media screen and (min-width: 992px) {
+    main .content #home .row .album-conteiner .album-box {
+        width: calc(100% / 6);
+    }  
+}
+
